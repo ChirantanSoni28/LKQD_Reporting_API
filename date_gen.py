@@ -16,7 +16,9 @@ def customdate():
 
 def dategen():
 
-    period = sys.argv[1]
+    period = sys.argv[3]
+
+    # period = input("date period")
 
     today = datetime.date.today()
     if period == "yesterday":
@@ -56,4 +58,4 @@ def dategen():
 
     return str(startdate), str(enddate)
 
-print(dategen())
+# print(dategen())

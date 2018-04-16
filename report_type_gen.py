@@ -1,11 +1,13 @@
 import sys
 
 
-def report_type_gen(report_type_selected = input("please enter")):
+def report_type_gen():
 
-    # report_type_selected = input("please enter")
+    # report_type_selected = input("please enter report type")
 
-    type_of_report = ['supply_report','demand_report','supply_domain_report','supply_app_bundleid_report','supply_source_enviorment_report','demand_Source_enviorment_report']
+    report_type_selected = sys.argv[2]
+
+    type_of_report = ['supply_report','demand_report','supply_domain_report','supply_app_bundleid_report']
 
     dimension = ['PARTNER','SITE','SOURCE','DEAL','TAG','DOMAIN','APP_NAME','BUNDLE_ID','ENVIRONMENT']
     supply_metrics = ['OPPORTUNITIES','FILL_RATE']
@@ -15,17 +17,26 @@ def report_type_gen(report_type_selected = input("please enter")):
 
     if report_type_selected == type_of_report[0]:
 
-        dim = dimension[0:2]
+        dim = [dimension[0],dimension[1],dimension[-1]]
         met = supply_metrics + supply_demand_metrics
 
     elif report_type_selected == type_of_report[1]:
 
-        dim = dimension[2:5]
+        dim = [dimension[2], dimension[3], dimension[4], dimension[-1]]
         met = supply_demand_metrics + demand_metrics
 
     elif report_type_selected == type_of_report[2]:
 
-        dim =dimension
+        dim = [dimension[1],dimension[5]]
+        met = supply_metrics + supply_demand_metrics
+
+    elif report_type_selected == type_of_report[3]:
+
+        dim = [dimension[1],dimension[6],dimension[7]]
+        met = supply_metrics + supply_demand_metrics
 
 
-report_type_gen("supply_report")
+    return dim,met
+
+
+# print(report_type_gen())
