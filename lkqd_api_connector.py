@@ -16,10 +16,11 @@ def api_connector():
     response = req.post("https://api.lkqd.com/reports",  json = data , auth = (credentials['Username'],credentials['Password']))
     print(response.status_code)
     data_dict = json.loads(response.text)
-    # print(data_dict["data"]["entries"])
-    df = pd.DataFrame(data_dict["data"]["entries"])
+    print(data_dict)
+    print(data_dict["data"]["entries"])
+    # df = pd.DataFrame(data_dict["data"]["entries"])
 
-    return df
+    # return df
 
 
 # new_df = df.filter(['adImpressions', 'adOpportunities', 'dimension2Id', 'dimension2Name','dimension3Name', 'fieldId', 'fieldName', 'fillRate', 'timeDimension'], axis=1)
@@ -28,4 +29,4 @@ def api_connector():
 # print(new_df)
 # print(df.columns.tolist())
 
-# print(api_connector())
+print(api_connector())
