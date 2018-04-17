@@ -7,7 +7,7 @@ from payload_gen import payload_data_gen
 
 def api_connector():
 
-    credentials = {'Username' : '4BRrKTFu2godcuiNjBDAG9jlB48D8bJB' , 'Password': 'WrYT6g8lFJZbKLrCAzWGAScy1QkxZgpDGMYiaexxKJM'}
+    credentials = {'Username' : '' , 'Password': ''}
 
     data = payload_data_gen()
 
