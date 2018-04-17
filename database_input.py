@@ -21,7 +21,7 @@ def mysql_connector(credentials):
 
     engine = sql.create_engine(url)
     connection = engine.connect()
-    
+
 
     return connection
 
@@ -52,7 +52,8 @@ def data_to_table():
                                                                                                    'viewable_impressions': sql.types.FLOAT(precision=4, asdecimal=True),
                                                                                                    })
         print(report_types[0])
-    elif report_types == report_types[1]:
+
+    elif report_type == report_types[1]:
 
         data.to_sql(name=report_types[1], con=connection, if_exists='replace', index=False, dtype={'date': sql.types.DATE,
                                                                                                    'demand_enviornment':sql.types.VARCHAR(length=225),
@@ -84,7 +85,7 @@ def data_to_table():
 
         print(report_types[1])
 
-    elif report_types == report_types[2]:
+    elif report_type == report_types[2]:
 
         data.to_sql(name=report_types[2], con=connection, if_exists='replace', index=False, dtype={'date':sql.types.DATE,
                                                                                                    'supply_source_id': sql.types.INTEGER(),
@@ -103,7 +104,7 @@ def data_to_table():
                                                                                                    })
         print(report_types[2])
 
-    elif report_types == report_types[3]:
+    elif report_type == report_types[3]:
 
         data.to_sql(name=report_types[3], con=connection, if_exists='replace', index=False, dtype={'date':sql.types.DATE,
                                                                                                    'supply_source_id': sql.types.INTEGER(),

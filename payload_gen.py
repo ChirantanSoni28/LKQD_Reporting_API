@@ -3,6 +3,10 @@ from report_type_gen import report_type_gen
 import sys
 
 
+
+
+
+
 def time_dimension_selected():
 
     time_dimensions_selected = sys.argv[1]
@@ -41,7 +45,8 @@ def payload_data_gen():
         "startDate": start_date,
         "endDate": end_date,
         "timezone": "UTC",
-        "metrics": metrics
+        "metrics": metrics,
+        "limit": "100000"
     }
 
 
