@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15d11d49-668f-4c40-a512-9bc534b34e4e" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/database_input.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/API_data_parser.py" afterPath="$PROJECT_DIR$/API_data_parser.py" />
       <change beforePath="$PROJECT_DIR$/lkqd_api_connector.py" afterPath="$PROJECT_DIR$/lkqd_api_connector.py" />
     </list>
@@ -17,15 +19,17 @@
     <SUITE FILE_PATH="coverage/LKQD_Reporting_API$lkqd_api_connector.coverage" NAME="lkqd_api_connector Coverage Results" MODIFIED="1523911253265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LKQD_Reporting_API$report_type_gen.coverage" NAME="report_type_gen Coverage Results" MODIFIED="1523893964298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LKQD_Reporting_API$API_data_parser.coverage" NAME="API_data_parser Coverage Results" MODIFIED="1523911145882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LKQD_Reporting_API$API_data_parser.coverage" NAME="API_data_parser Coverage Results" MODIFIED="1523981132632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LKQD_Reporting_API$database_input.coverage" NAME="database_input Coverage Results" MODIFIED="1523986063307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LKQD_Reporting_API$payload_gen.coverage" NAME="payload_gen Coverage Results" MODIFIED="1523898382893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lkqd_api_connector.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lkqd_api_connector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lkqd_api_connector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state relative-caret-position="330">
+              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -36,10 +40,22 @@
       <file leaf-file-name="API_data_parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API_data_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="76" lean-forward="false" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+            <state relative-caret-position="1470">
+              <caret line="83" column="22" lean-forward="true" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database_input.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database_input.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1115">
+              <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,7 +64,7 @@
       <file leaf-file-name="payload_gen.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/payload_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
+            <state relative-caret-position="376">
               <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -60,8 +76,8 @@
       <file leaf-file-name="date_gen.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/date_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="-125">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -72,8 +88,8 @@
       <file leaf-file-name="report_type_gen.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/report_type_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+            <state relative-caret-position="135">
+              <caret line="9" column="103" lean-forward="false" selection-start-line="9" selection-start-column="103" selection-end-line="9" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -96,9 +112,10 @@
       <list>
         <option value="$PROJECT_DIR$/date_gen.py" />
         <option value="$PROJECT_DIR$/report_type_gen.py" />
+        <option value="$PROJECT_DIR$/lkqd_api_connector.py" />
         <option value="$PROJECT_DIR$/payload_gen.py" />
         <option value="$PROJECT_DIR$/API_data_parser.py" />
-        <option value="$PROJECT_DIR$/lkqd_api_connector.py" />
+        <option value="$PROJECT_DIR$/database_input.py" />
       </list>
     </option>
   </component>
@@ -129,6 +146,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,7 +158,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -161,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lkqd_api_connector">
+  <component name="RunManager" selected="Python.database_input">
     <configuration name="API_data_parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -176,12 +193,12 @@
       <module name="LKQD_Reporting_API" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API_data_parser.py" />
-      <option name="PARAMETERS" value="daily supply_domain_report monthtodate" />
+      <option name="PARAMETERS" value="daily supply_report monthtodate" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="date_gen" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="database_input" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -194,8 +211,8 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LKQD_Reporting_API" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/date_gen.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database_input.py" />
+      <option name="PARAMETERS" value="daily supply_report monthtodate" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -260,17 +277,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.report_type_gen" />
       <item index="1" class="java.lang.String" itemvalue="Python.lkqd_api_connector" />
-      <item index="2" class="java.lang.String" itemvalue="Python.date_gen" />
-      <item index="3" class="java.lang.String" itemvalue="Python.payload_gen" />
-      <item index="4" class="java.lang.String" itemvalue="Python.API_data_parser" />
+      <item index="2" class="java.lang.String" itemvalue="Python.payload_gen" />
+      <item index="3" class="java.lang.String" itemvalue="Python.API_data_parser" />
+      <item index="4" class="java.lang.String" itemvalue="Python.database_input" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.lkqd_api_connector" />
+        <item index="0" class="java.lang.String" itemvalue="Python.database_input" />
         <item index="1" class="java.lang.String" itemvalue="Python.API_data_parser" />
-        <item index="2" class="java.lang.String" itemvalue="Python.payload_gen" />
-        <item index="3" class="java.lang.String" itemvalue="Python.report_type_gen" />
-        <item index="4" class="java.lang.String" itemvalue="Python.date_gen" />
+        <item index="2" class="java.lang.String" itemvalue="Python.lkqd_api_connector" />
+        <item index="3" class="java.lang.String" itemvalue="Python.payload_gen" />
+        <item index="4" class="java.lang.String" itemvalue="Python.report_type_gen" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +317,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1013431" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08730159" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -329,6 +346,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lkqd_api_connector.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkqd_api_connector.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
@@ -355,18 +382,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report_type_gen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/date_gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="-125">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -375,7 +394,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/payload_gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
+        <state relative-caret-position="376">
           <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -383,22 +402,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/report_type_gen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="103" lean-forward="false" selection-start-line="9" selection-start-column="103" selection-end-line="9" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkqd_api_connector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API_data_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="76" lean-forward="false" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+        <state relative-caret-position="1470">
+          <caret line="83" column="22" lean-forward="true" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lkqd_api_connector.py">
+    <entry file="file://$PROJECT_DIR$/database_input.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="-1115">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>

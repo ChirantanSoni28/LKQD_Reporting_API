@@ -29,8 +29,26 @@ def data_organizer():
         columns_reindexed = ['date', 'demand_enviornment', 'demand_partner_id', 'demand_partner_name', 'demand_deal_id', 'demand_deal_name', 'demand_tag_id', 'demand_tag_name', 'requests', 'response','impressions' , 'cpm', 'revenue', 'cost','profit', 'viewablity_measured_rate','viewability_rate', 'viewable_impressions', 'vast_ads','vpaid_ads', 'vpaid_attempts', 'vpaid_timeouts', 'vpaid_errors','vpaid_responses', 'wins','win_rate']
 
 
-    # elif sys.argv[2] == type_of_report[2]:
+    elif sys.argv[2] == type_of_report[2]:
 
+        report = type_of_report[2]
+
+        columns_filtered = ['adImpressions', 'adOpportunities', 'adViewabilityMeasuredRate', 'adViewabilityRate', 'adViewableImps', 'cpm', 'dimension2Name', 'fieldId', 'fieldName', 'fillRate', 'profit', 'revenue', 'siteCost', 'timeDimension']
+
+        columns_renamed = ['impressions', 'opportunities','viewablity_measured_rate','viewability_rate', 'viewable_impressions', 'cpm', 'domains', 'supply_source_id','supply_source_name','fillrate' ,'profit', 'revenue', 'cost', 'date']
+
+        columns_reindexed = ['date', 'supply_source_id', 'supply_source_name', 'domains', 'opportunities', 'impressions' , 'fillrate', 'cpm', 'revenue', 'cost','profit', 'viewablity_measured_rate','viewability_rate', 'viewable_impressions' ]
+
+
+    elif sys.argv[2] == type_of_report[3]:
+
+        report = type_of_report[3]
+
+        columns_filtered = ['adImpressions', 'adOpportunities', 'adViewabilityMeasuredRate', 'adViewabilityRate', 'adViewableImps', 'cpm', 'dimension2Name', 'dimension3Name', 'fieldId', 'fieldName', 'fillRate', 'profit', 'revenue', 'siteCost', 'timeDimension']
+
+        columns_renamed = ['impressions', 'opportunities','viewablity_measured_rate','viewability_rate', 'viewable_impressions', 'cpm', 'app_name', 'bundle_id', 'supply_source_id','supply_source_name','fillrate' ,'profit', 'revenue', 'cost', 'date']
+
+        columns_reindexed = ['date', 'supply_source_id', 'supply_source_name', 'app_name', 'bundle_id', 'opportunities', 'impressions' , 'fillrate', 'cpm', 'revenue', 'cost','profit', 'viewablity_measured_rate','viewability_rate', 'viewable_impressions']
 
 
 
@@ -43,24 +61,24 @@ def data_organizer():
 def data_parser():
 
     data = api_connector()
-    print(data.columns.tolist())
-    print(data)
+    # print(data.columns.tolist())
+    # print(data)
 
-    # report_type, filter,renamed, reindexed  =  data_organizer()
-    #
-    # sys.argv[2] == report_type
-    #
-    #     new_df = data.filter(filter, axis=1)
-    #     # print(new_df)
-    #     new_df.columns = renamed
-    #
-    #     new_df = new_df.reindex(reindexed, axis=1)
-    #
+    report_type, filter,renamed, reindexed  =  data_organizer()
 
+    if sys.argv[2] == report_type:
+
+         new_df = data.filter(filter, axis=1)
+         # print(new_df)
+         new_df.columns = renamed
+
+         new_df = new_df.reindex(reindexed, axis=1)
 
 
-
+    return new_df
 
 
 
-print(data_parser())
+
+
+# print(data_parser())
