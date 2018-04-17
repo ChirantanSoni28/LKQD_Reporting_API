@@ -10,6 +10,20 @@ Below is the documentation of dependencies and function definitions of LKQD_Repo
 | pandas==0.22.0     | sys                             | 
 | SQLAlchemy==1.2.6  | datetime                        | 
 
+### Table of Contents
+**[Installation and Usage Instructions](#installation-and-usage-instructions)**<br>
+**[Notes and Miscellaneous](#notes-and-miscellaneous)**<br>
+**[List of Scripts and Functions with description](#list-of-scripts-and-functions-with-description)**<br>
+
+## Installation and Usage Instructions
+
+#### Manual/Development
+
+1. Clone this repo.
+2. Get LKQD API keys from LKQD platform : clientid and Secret
+3. mySQL database payload : Hostname, port, Database Name, User ID and Password
+4. Input API keys in credential dictionary in api_connector()
+
 
 ### List of Scripts and Functions with description
 
@@ -38,18 +52,7 @@ Below is the documentation of dependencies and function definitions of LKQD_Repo
 * mysql_connector( )
 * data_to_table( )
 
-### Table of Contents
-**[Installation and Usage Instructions](#installation-instructions)**<br>
-**[Notes and Miscellaneous](#notes-and-miscellaneous)**<br>
 
-## Installation Instructions
-
-#### Manual/Development
-
-1. Clone this repo.
-2. Get LKQD API keys from LKQD platform : clientid and Secret
-3. mySQL database payload : Hostname, port, Database Name, User ID and Password
-4. Input API keys in credential dictionary in api_connector()
 
 
 
