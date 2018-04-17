@@ -4,11 +4,11 @@ import sys
 import pandas as pd
 
 
-payload = {"host" : "@thrivehq.cusrikqjbmvm.us-east-1.rds.amazonaws.com",
-            "pnum" : "3306",
-            "dbname": "lkqd_api",
-            "id": "Thriveplus2017",
-            "pwd":  "321happy"}
+payload = {"host" : "",
+            "pnum" : "",
+            "dbname": "",
+            "id": "",
+            "pwd":  ""}
 
 
 data = data_parser()
