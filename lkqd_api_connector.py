@@ -7,16 +7,12 @@ import base64
 
 def api_connector():
 
-<<<<<<< HEAD
-    credentials = {'Username' : '4BRrKTFu2godcuiNjBDAG9jlB48D8bJB' , 'Password': 'WrYT6g8lFJZbKLrCAzWGAScy1QkxZgpDGMYiaexxKJM'}
+    credentials = {'Username' : '' , 'Password': ''}
     credentials_string = credentials["Username"] + ":" + credentials["Password"]
     credentials_string = bytearray(credentials_string, 'utf-8')
     b64_credentials_string = base64.b64encode(credentials_string).decode("utf-8")
     credential_header =  "Basic {}".format(b64_credentials_string)
-    # print(credential_header)
-=======
-    credentials = {'Username' : '' , 'Password': ''}
->>>>>>> a5acdbda4764477b82a96ede5ee3a9b8f1d6d9ec
+
 
     data = payload_data_gen()
 
@@ -32,8 +28,6 @@ def api_connector():
     return df
 
 
-<<<<<<< HEAD
-print(api_connector())
-=======
+
 # print(api_connector())
->>>>>>> a5acdbda4764477b82a96ede5ee3a9b8f1d6d9ec
+
