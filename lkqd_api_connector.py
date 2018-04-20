@@ -18,7 +18,7 @@ def api_connector():
     limit = 100000
     result_flag = True
     counter = 0
-
+    dataframe_stack = []
     while result_flag:
 
         data = payload_data_gen(offset,limit)
@@ -35,10 +35,14 @@ def api_connector():
         result_flag = data_dict['data']['hasMoreResults']
 
         counter += 1
-        print("Script was ran"+counter)
+        print("Script was ran " + str(counter) + 'times')
         offset = (limit * counter) + 1
         df = pd.DataFrame(data_dict["data"]["entries"])
+        dataframe_stack.append(df)
+        print(len(dataframe_stack))
 
-    return df, counter
+    final_dataframe = pd.concat(dataframe_stack)
+
+    return final_dataframe, counter
 
 # print(api_connector())
