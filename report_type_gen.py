@@ -6,7 +6,6 @@ def report_type_gen():
     # report_type_selected = input("please enter report type")
 
     report_type_selected = sys.argv[2]
-
     type_of_report = ['supply_report','demand_report','supply_domain_report','supply_app_bundleid_report']
 
     dimension = ['PARTNER','SITE','SOURCE','DEAL','TAG','DOMAIN','APP_NAME','BUNDLE_ID','ENVIRONMENT']

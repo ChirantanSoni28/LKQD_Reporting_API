@@ -60,7 +60,7 @@ def data_organizer():
 
 def data_parser():
 
-    data = api_connector()
+    data ,_ = api_connector()
     # print(data.columns.tolist())
     # print(data)
 
