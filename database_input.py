@@ -2,7 +2,9 @@ import sqlalchemy as sql
 from API_data_parser import data_parser
 import sys
 import pandas as pd
+from lkqd_api_connector import api_connector
 
+_,counter = api_connector()
 
 payload = {"host" : "@thrivehq.cusrikqjbmvm.us-east-1.rds.amazonaws.com",
             "pnum" : "3306",
@@ -87,7 +89,13 @@ def data_to_table():
 
     elif report_type == report_types[2]:
 
-        data.to_sql(name=report_types[2], con=connection, if_exists='replace', index=False, dtype={'date':sql.types.DATE,
+        if counter == 1:
+            if_exist = 'replace'
+        elif counter > 1:
+            if_exist = 'append'
+
+
+        data.to_sql(name=report_types[2], con=connection, if_exists=if_exist, index=False, dtype={'date':sql.types.DATE,
                                                                                                    'supply_source_id': sql.types.INTEGER(),
                                                                                                    'supply_source_name': sql.types.VARCHAR(length=225),
                                                                                                    'domains': sql.types.VARCHAR(length=225),
@@ -106,7 +114,13 @@ def data_to_table():
 
     elif report_type == report_types[3]:
 
-        data.to_sql(name=report_types[3], con=connection, if_exists='replace', index=False, dtype={'date':sql.types.DATE,
+
+        if counter == 1:
+            if_exist = 'replace'
+        elif counter > 1:
+            if_exist = 'append'
+
+        data.to_sql(name=report_types[3], con=connection, if_exists= if_exist, index=False, dtype={'date':sql.types.DATE,
                                                                                                    'supply_source_id': sql.types.INTEGER(),
                                                                                                    'supply_source_name': sql.types.VARCHAR(length=225),
                                                                                                    'app_name': sql.types.VARCHAR(length=225),
