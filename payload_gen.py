@@ -48,7 +48,8 @@ def payload_data_gen(offset,limit):
             "endDate": end_date,
             "timezone": "UTC",
             "metrics": metrics,
-
+            "offset": offset,
+            "limit": limit
         }
 
     elif sys.argv[2] == "supply_domain_report" or sys.argv[2] == "supply_app_bundleid_report":
