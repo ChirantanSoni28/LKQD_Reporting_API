@@ -4,7 +4,7 @@ import sys
 import pandas as pd
 from lkqd_api_connector import api_connector
 
-_,counter = api_connector()
+
 
 payload = {"host" : "@thrivehq.cusrikqjbmvm.us-east-1.rds.amazonaws.com",
             "pnum" : "3306",
@@ -88,7 +88,8 @@ def data_to_table():
         print(report_types[1])
 
     elif report_type == report_types[2]:
-
+        
+        _,counter = api_connector()
         if counter == 1:
             if_exist = 'replace'
         elif counter > 1:
@@ -114,6 +115,7 @@ def data_to_table():
 
     elif report_type == report_types[3]:
 
+        _,counter = api_connector()
 
         if counter == 1:
             if_exist = 'replace'

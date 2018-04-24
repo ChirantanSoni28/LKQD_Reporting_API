@@ -60,7 +60,13 @@ def data_organizer():
 
 def data_parser():
 
-    data ,_ = api_connector()
+    if sys.argv[2] == 'supply_report' or sys.argv[2] == 'demand_report':
+
+       data = api_connector()
+
+    elif sys.argv[2] == "supply_domain_report" or sys.argv[2] == "supply_app_bundleid_report":
+
+       data,_ = api_connector()
     # print(data.columns.tolist())
     # print(data)
 

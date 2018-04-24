@@ -1,7 +1,5 @@
-import requests as req
-import json
-import pandas as pd
-from payload_gen import payload_data_gen
+from connector_type import supply_demand_report, domains_report
+import sys
 import base64
 
 
@@ -19,43 +17,18 @@ def api_connector():
     credential_header =  "Basic {}".format(b64_credentials_string)
     # print(credential_header)
 
+    if sys.argv[2] == 'supply_report' or sys.argv[2] == 'demand_report':
 
-    offset = 0
-    limit = 1000000
-    result_flag = True
-    counter = 0
-    dataframe_stack = []
+        data = supply_demand_report(credential_header)
 
-    while result_flag:
+        return data
 
-        data = payload_data_gen(offset,limit)
-        print(data)
-        print(data['offset'])
-        print(data['limit'])
-        response = req.post("https://api.lkqd.com/reports", headers= {"Authorization": credential_header}, json= data)
+    elif sys.argv[2] == "supply_domain_report" or sys.argv[2] == "supply_app_bundleid_report":
 
-        print(response.status_code)
-        data_dict = json.loads(response.text)
-        # print(data_dict)
+        data, counter =  domains_report(credential_header)
 
-        if data_dict['status'] == 'error':
-            print(data_dict['errors'])
-            break
-        else:
-            # print(data_dict["data"]["entries"])
-            result_flag = data_dict['data']['hasMoreResults']
-            print(result_flag)
-            counter += 1
-            print("Script was ran " + str(counter) + 'times')
-            offset = (limit * counter) + 1
-            df = pd.DataFrame(data_dict["data"]["entries"])
-            dataframe_stack.append(df)
-            print(len(dataframe_stack))
+        return data,counter
 
 
-
-    final_dataframe = pd.concat(dataframe_stack)
-
-    return final_dataframe, counter
 
 # print(api_connector())
