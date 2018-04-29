@@ -1,4 +1,3 @@
-
 import requests as req
 import json
 import pandas as pd
@@ -61,10 +60,13 @@ def domains_report(credential_header):
                 print("Script was ran " + str(counter) + ' times')
                 offset = (limit * counter) + 1
                 df = pd.DataFrame(data_dict["data"]["entries"])
+                print(df.columns.tolist())
                 dataframe_stack.append(df)
                 print(len(dataframe_stack))
 
+    if counter == 1:
+        final_dataframe = df
+    elif counter > 1:
+        final_dataframe = pd.concat(dataframe_stack)
 
-    final_dataframe = pd.concat(dataframe_stack)
     return final_dataframe, counter
-

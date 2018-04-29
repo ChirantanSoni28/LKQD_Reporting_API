@@ -49,7 +49,7 @@ def payload_supply_demand_reports_data_gen():
 
 
 
-    # if sys.argv[2] == 'supply_report' or sys.argv[2] == 'demand_report':
+
 
     return data
 
@@ -60,7 +60,7 @@ def payload_domain_reports_data_gen(offset,limit):
 
 
 
-    # if sys.argv[2] == "supply_domain_report" or sys.argv[2] == "supply_app_bundleid_report":
+
 
     data = {
         "timeDimension": time_dimension_selected(),

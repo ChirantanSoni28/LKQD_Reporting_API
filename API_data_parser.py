@@ -2,11 +2,13 @@ from lkqd_api_connector import api_connector
 import sys
 
 
+time_dimension = 'date'
 
 
 def data_organizer():
 
-    type_of_report = ['supply_report', 'demand_report', 'supply_domain_report', 'supply_app_bundleid_report']
+    type_of_report = ['supply_report', 'demand_report', 'supply_domain_report', 'supply_app_bundleid_report',
+                      'demand_domain_report', 'demand_app_bundleid_report']
 
     if sys.argv[2] == type_of_report[0]:
 
@@ -33,26 +35,42 @@ def data_organizer():
 
         report = type_of_report[2]
 
-        columns_filtered = ['adImpressions', 'adOpportunities', 'adViewabilityMeasuredRate', 'adViewabilityRate', 'adViewableImps', 'cpm', 'dimension2Name', 'fieldId', 'fieldName', 'fillRate', 'profit', 'revenue', 'siteCost', 'timeDimension']
+        columns_filtered = ['adImpressions', 'adOpportunities', 'adViewabilityMeasuredRate', 'adViewabilityRate', 'adViewableImps', 'cpm', 'dimension2Name', 'fieldId', 'fieldName', 'fillRate', 'profit', 'revenue', 'siteCost']
 
-        columns_renamed = ['impressions', 'opportunities','viewablity_measured_rate','viewability_rate', 'viewable_impressions', 'cpm', 'domains', 'supply_source_id','supply_source_name','fillrate' ,'profit', 'revenue', 'cost', 'date']
+        columns_renamed = ['impressions', 'opportunities','viewablity_measured_rate','viewability_rate', 'viewable_impressions', 'cpm', 'domains', 'supply_source_id','supply_source_name','fillrate' ,'profit', 'revenue', 'cost']
 
-        columns_reindexed = ['date', 'supply_source_id', 'supply_source_name', 'domains', 'opportunities', 'impressions' , 'fillrate', 'cpm', 'revenue', 'cost','profit', 'viewablity_measured_rate','viewability_rate', 'viewable_impressions' ]
+        columns_reindexed = ['supply_source_id', 'supply_source_name', 'domains', 'opportunities', 'impressions' , 'fillrate', 'cpm', 'revenue', 'cost','profit', 'viewablity_measured_rate','viewability_rate', 'viewable_impressions' ]
 
 
     elif sys.argv[2] == type_of_report[3]:
 
         report = type_of_report[3]
 
-        columns_filtered = ['adImpressions', 'adOpportunities', 'adViewabilityMeasuredRate', 'adViewabilityRate', 'adViewableImps', 'cpm', 'dimension2Name', 'dimension3Name', 'fieldId', 'fieldName', 'fillRate', 'profit', 'revenue', 'siteCost', 'timeDimension']
+        columns_filtered = ['adImpressions', 'adOpportunities', 'adViewabilityMeasuredRate', 'adViewabilityRate', 'adViewableImps', 'cpm', 'dimension2Name', 'dimension3Name', 'fieldId', 'fieldName', 'fillRate', 'profit', 'revenue', 'siteCost']
 
-        columns_renamed = ['impressions', 'opportunities','viewablity_measured_rate','viewability_rate', 'viewable_impressions', 'cpm', 'app_name', 'bundle_id', 'supply_source_id','supply_source_name','fillrate' ,'profit', 'revenue', 'cost', 'date']
+        columns_renamed = ['impressions', 'opportunities','viewablity_measured_rate','viewability_rate', 'viewable_impressions', 'cpm', 'app_name', 'bundle_id', 'supply_source_id','supply_source_name','fillrate' ,'profit', 'revenue', 'cost']
 
-        columns_reindexed = ['date', 'supply_source_id', 'supply_source_name', 'app_name', 'bundle_id', 'opportunities', 'impressions' , 'fillrate', 'cpm', 'revenue', 'cost','profit', 'viewablity_measured_rate','viewability_rate', 'viewable_impressions']
+        columns_reindexed = ['supply_source_id', 'supply_source_name', 'app_name', 'bundle_id', 'opportunities', 'impressions' , 'fillrate', 'cpm', 'revenue', 'cost','profit', 'viewablity_measured_rate','viewability_rate', 'viewable_impressions']
+
+
+    elif sys.argv[2] == type_of_report[4]:
+
+       report = type_of_report[4]
+
+       columns_filtered = ['adImpressions', 'adRequests', 'adResponses', 'adViewabilityMeasuredRate','adViewabilityRate', 'adViewableImps', 'adVpaidAttempts', 'adVpaidErrors', 'adVpaidResponses','adVpaidTimeouts', 'adWins', 'cpm', 'dimension2Name', 'fieldId', 'fieldName','profit', 'revenue', 'siteCost', 'vastAds', 'vpaidAds', 'winRate']
+
+       columns_renamed =  ['impressions','requests','responses', 'viewablity_measured_rate','viewability_rate', 'viewable_impressions', 'vpaid_attempts', 'vpaid_errors', 'vpaid_responses','vpaid_timeouts', 'wins', 'cpm' , 'domains', 'demand_tag_id', 'demand_tag_name', 'profit', 'revenue', 'cost', 'vast_ads', 'vpaid_ads' , 'win_rate']
+
+       columns_reindexed = ['demand_tag_id', 'demand_tag_name', 'domains', 'requests', 'response','impressions' , 'cpm', 'revenue', 'cost','profit', 'viewablity_measured_rate','viewability_rate', 'viewable_impressions', 'vast_ads','vpaid_ads', 'vpaid_attempts', 'vpaid_timeouts', 'vpaid_errors','vpaid_responses', 'wins','win_rate']
+
+
+    elif sys.argv[2] == type_of_report[5]:
+
 
 
 
     return report, columns_filtered, columns_renamed,columns_reindexed
+
 
 
 
@@ -67,18 +85,25 @@ def data_parser():
     elif sys.argv[2] == "supply_domain_report" or sys.argv[2] == "supply_app_bundleid_report":
 
        data,_ = api_connector()
-    # print(data.columns.tolist())
+
+    print(data.columns.tolist())
     # print(data)
 
     report_type, filter,renamed, reindexed  =  data_organizer()
 
+    if sys.argv[1] == 'daily':
+        filter + ['timeDimension']
+        renamed + [time_dimension]
+        [time_dimension] + reindexed
+
+
     if sys.argv[2] == report_type:
 
-         new_df = data.filter(filter, axis=1)
-         # print(new_df)
-         new_df.columns = renamed
+        new_df = data.filter(filter, axis=1)
+        # print(new_df)
+        new_df.columns = renamed
 
-         new_df = new_df.reindex(reindexed, axis=1)
+        new_df = new_df.reindex(reindexed, axis=1)
 
 
     return new_df

@@ -7,6 +7,7 @@ import base64
 # response = req.get("https://lkqd-api.firebaseio.com/")
 # print(response.status_code)
 
+reports = ['supply_domain_report','supply_app_bundleid_report','demand_domain_report','demand_app_bundleid_report']
 
 def api_connector():
 
@@ -23,12 +24,13 @@ def api_connector():
 
         return data
 
-    elif sys.argv[2] == "supply_domain_report" or sys.argv[2] == "supply_app_bundleid_report":
+    elif sys.argv[2] in reports:
 
         data, counter =  domains_report(credential_header)
+
 
         return data,counter
 
 
 
-# print(api_connector())
+print(api_connector())

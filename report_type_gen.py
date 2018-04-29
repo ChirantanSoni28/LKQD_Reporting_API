@@ -6,7 +6,7 @@ def report_type_gen():
     # report_type_selected = input("please enter report type")
 
     report_type_selected = sys.argv[2]
-    type_of_report = ['supply_report','demand_report','supply_domain_report','supply_app_bundleid_report']
+    type_of_report = ['supply_report','demand_report','supply_domain_report','supply_app_bundleid_report','demand_domain_report','demand_app_bundleid_report']
 
     dimension = ['PARTNER','SITE','SOURCE','DEAL','TAG','DOMAIN','APP_NAME','BUNDLE_ID','ENVIRONMENT']
     supply_metrics = ['OPPORTUNITIES','FILL_RATE']
@@ -34,6 +34,15 @@ def report_type_gen():
         dim = [dimension[1],dimension[6],dimension[7]]
         met = supply_metrics + supply_demand_metrics
 
+    elif report_type_selected == type_of_report[4]:
+
+        dim = [dimension[4], dimension[5]]
+        met = supply_demand_metrics + demand_metrics
+
+    elif report_type_selected == type_of_report[5]:
+
+        dim = [dimension[4], dimension[6],dimension[7]]
+        met = supply_demand_metrics + demand_metrics
 
     return dim,met
 
