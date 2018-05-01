@@ -4,13 +4,12 @@ import base64
 
 
 
-# response = req.get("https://lkqd-api.firebaseio.com/")
-# print(response.status_code)
+
 
 
 def api_connector():
 
-    credentials = {'Username' : '4BRrKTFu2godcuiNjBDAG9jlB48D8bJB' , 'Password': 'WrYT6g8lFJZbKLrCAzWGAScy1QkxZgpDGMYiaexxKJM'}
+    credentials = {'Username' : '' , 'Password': ''}
     credentials_string = credentials["Username"] + ":" + credentials["Password"]
     credentials_string = bytearray(credentials_string, 'utf-8')
     b64_credentials_string = base64.b64encode(credentials_string).decode("utf-8")
